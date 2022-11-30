@@ -6,6 +6,8 @@ app.get("/users/:userId", (req, res) => {
   res.json({
     userId: req.params.userId,
     reqHeaders: req.headers,
+    reqBody: req.body,
+    reqParams: req.params
   });
 });
 
