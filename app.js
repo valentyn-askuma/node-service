@@ -3,12 +3,16 @@ const app = express();
 const port = 5000;
 
 app.get("/users/:userId", (req, res) => {
-  res.json({
+  const data = {
     userId: req.params.userId,
     reqHeaders: req.headers,
     reqBody: req.body,
-    reqParams: req.params
-  });
+    reqParams: req.params,
+  };
+
+  console.log(new Date().toLocaleDateString(), data);
+
+  res.json(data);
 });
 
 app.listen(port, () => {
