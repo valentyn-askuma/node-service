@@ -10,7 +10,7 @@ app.get("/users/:userId", (req, res) => {
     reqParams: req.params,
   };
 
-  console.log(new Date().toLocaleDateString(), data);
+  console.log(new Date().toLocaleString(), data);
 
   res.json(data);
 });
